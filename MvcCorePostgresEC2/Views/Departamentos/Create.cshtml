@@ -1,0 +1,37 @@
+﻿@model MvcCorePostgresEC2.Models.Departamento
+
+@{
+    ViewData["Title"] = "Crear Departamento";
+}
+
+<div class="container mt-5" style="max-width: 600px;">
+    <div class="card bg-dark text-white border-0 shadow-lg rounded-4 p-4">
+        <h3 class="fw-light mb-4">Nuevo Departamento</h3>
+        
+        <form asp-action="Create" method="post">
+            <div class="mb-3">
+                <label asp-for="DeptNo" class="form-label text-secondary fw-semibold">Número de Departamento</label>
+                <input asp-for="DeptNo" class="form-control form-control-lg bg-dark text-white border-secondary shadow-none" placeholder="Ej: 10" required />
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Nombre" class="form-label text-secondary fw-semibold">Nombre</label>
+                <input asp-for="Nombre" class="form-control form-control-lg bg-dark text-white border-secondary shadow-none" placeholder="Ej: Contabilidad" required />
+            </div>
+
+            <div class="mb-4">
+                <label asp-for="Loc" class="form-label text-secondary fw-semibold">Localidad</label>
+                <input asp-for="Loc" class="form-control form-control-lg bg-dark text-white border-secondary shadow-none" placeholder="Ej: Madrid" required />
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center mt-5 pt-4 border-top border-secondary">
+                <a asp-action="Index" class="btn text-secondary text-decoration-none px-0 hover-text-white">
+                    Cancelar
+                </a>
+                <button type="submit" class="btn btn-light rounded-pill px-5 shadow-sm fw-medium">
+                    Guardar
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

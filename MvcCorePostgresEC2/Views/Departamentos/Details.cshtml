@@ -1,0 +1,32 @@
+﻿@model MvcCorePostgresEC2.Models.Departamento
+
+@{
+    ViewData["Title"] = "Detalles del Departamento";
+}
+
+<div class="container mt-5 max-w-lg mx-auto" style="max-width: 600px;">
+    <div class="card bg-dark text-white border-0 shadow-lg rounded-4 p-4">
+        <h3 class="fw-light mb-4">Detalles del Departamento</h3>
+        
+        <div class="mb-3">
+            <span class="d-block text-secondary small fw-semibold text-uppercase">Número de Departamento</span>
+            <span class="fs-5 text-white">@Model.DeptNo</span>
+        </div>
+        
+        <div class="mb-3">
+            <span class="d-block text-secondary small fw-semibold text-uppercase">Nombre</span>
+            <span class="fs-5 text-white">@Model.Nombre</span>
+        </div>
+        
+        <div class="mb-4">
+            <span class="d-block text-secondary small fw-semibold text-uppercase">Localidad</span>
+            <span class="fs-5 text-white">@Model.Loc</span>
+        </div>
+
+        <div class="mt-4 pt-4 border-top border-secondary">
+            <a asp-action="Index" class="btn btn-outline-light rounded-pill px-4">
+                &larr; Volver al listado
+            </a>
+        </div>
+    </div>
+</div>
